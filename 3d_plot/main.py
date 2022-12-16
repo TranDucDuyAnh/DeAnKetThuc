@@ -2,7 +2,7 @@ import plot as pl
 
 
 def main():
-    pl.hyperboloid()
+    pl.sphere()
 
 
 if __name__ == '__main__':
