@@ -1,4 +1,4 @@
-import numpy as np
+import random
 import pickle
 import os
 
@@ -7,7 +7,7 @@ import os
 def rand_list(a: int, b: int, m: int) -> list:
     t = []
     for i in range(m):
-        x = np.random.random() * (b - a) + a
+        x = random.random() * (b - a) + a
         t.append(x)
     return t
 
@@ -24,7 +24,7 @@ def arrange_list(t: list, m: int, reverse: bool) -> list:
     else:
         for i in range(0, m-1):
             for j in range(i+1, m):
-                if cl[i] < cl[j]:
+                if cl[i] > cl[j]:
                     cl[i], cl[j] = cl[j], cl[i]
     return cl
 
