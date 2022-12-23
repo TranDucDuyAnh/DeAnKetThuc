@@ -40,12 +40,12 @@ def hyperboloid():
 
 
 # Viết hàm vẽ đồ thị mặt cầu:
-def sphere(a: int, b: int, c: int, radius: int):
+def sphere():
     u = np.linspace(0, 2 * np.pi, 100)
     v = np.linspace(0, np.pi, 100)
-    x = (np.outer(np.cos(u), np.sin(v)) * radius) + a
-    y = (np.outer(np.sin(u), np.sin(v)) * radius) + b
-    z = (np.outer(np.ones(np.size(u)), np.cos(v)) * radius) + c
+    x = (np.outer(np.cos(u), np.sin(v)) * 2) - 2
+    y = (np.outer(np.sin(u), np.sin(v)) * 2) + 1
+    z = (np.outer(np.ones(np.size(u)), np.cos(v)) * 2) + 4
 
     fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
     sph = ax.plot_surface(x, y, z, cmap=cm.jet, linewidth=0)
