@@ -5,7 +5,9 @@ class NhanVien:
         self.luong = salary
 
     def __str__(self):
-        message = 'Họ tên: ' + self.hoten + ' | Tuổi: ' + str(self.tuoi) + ' | Lương: ' + str(self.luong)
+        message = 'Họ tên: ' + self.hoten \
+                  + ' | Tuổi: ' + str(self.tuoi) \
+                  + ' | Lương: ' + str(self.luong)
         return message
 
     def __gt__(self, other):
