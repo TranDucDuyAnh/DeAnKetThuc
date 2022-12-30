@@ -14,10 +14,10 @@ def get_list_value():
 def draw_plot(x, y0, y1, y2, y3):
     fig, ax = plt.subplots()
 
-    ax.plot(x, y0, label=r'$y = x^{4} - 2x^{2} - 3$')
-    ax.plot(x, y1, label=r'$y = 4x^{3} - 4x$')
-    ax.plot(x, y2, label=r'$y = 12^{2} - 4$')
-    ax.plot(x, y3, label=r'$y = 24x$')
+    ax.plot(x, y0, label=r'$y = x^{4} - 2x^{2} - 3$', marker=".")
+    ax.plot(x, y1, label=r'$y = 4x^{3} - 4x$', marker="^")
+    ax.plot(x, y2, label=r'$y = 12x^{2} - 4$', marker="x")
+    ax.plot(x, y3, label=r'$y = 24x$', marker="D")
 
     ax.set_xlabel("Trục hoành - x")
     ax.set_ylabel("Trục tung - y")
@@ -26,3 +26,12 @@ def draw_plot(x, y0, y1, y2, y3):
 
     ax.legend()
     plt.show()
+
+
+def main():
+    x, y0, y1, y2, y3 = get_list_value()
+    draw_plot(x, y0, y1, y2, y3)
+
+
+if __name__ == '__main__':
+    main()

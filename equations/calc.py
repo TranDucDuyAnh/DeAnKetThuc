@@ -47,3 +47,20 @@ def integral_calc():
     f = (1 - x*tan(x))/(x*x*cos(x) + x)
     ans = integrate(f, (x, 2*pi/3, pi))
     return ans
+
+
+def main():
+    a1 = multi_eqs()
+    a2 = limit_calc()
+    a3 = diff_calc()
+    a4 = antidiff_calc()
+    a5 = integral_calc()
+    print('a1 =', a1)
+    print('a2 =', a2)
+    print('a3 =', a3)
+    print('a4 =', a4)
+    print('a5 =', a5)
+
+
+if __name__ == '__main__':
+    main()

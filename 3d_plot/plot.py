@@ -53,3 +53,13 @@ def sphere():
     ax.set_title("Hình cầu")
 
     plt.show()
+
+
+def main():
+    saddle()
+    hyperboloid()
+    sphere()
+
+
+if __name__ == '__main__':
+    main()

@@ -42,3 +42,29 @@ def load_byte(path, file):
 def read_line_by_line(lt):
     for info in lt:
         print(info)
+
+
+danh_sach = []
+path = 'D:/data'
+file = 'employee.dat'
+
+
+def main():
+    #
+    add_employee(danh_sach, 'Trần Hữu Bảo Anh', 20, 50000)
+    add_employee(danh_sach, 'Lê Thanh Đức', 19, 44500)
+    add_employee(danh_sach, 'Nguyễn Văn Huy Hoàng', 23, 75000)
+    add_employee(danh_sach, 'Phạm Nhật Huy', 22, 69000)
+    #
+    list_employee(danh_sach)
+    #
+    ds2 = arrange_employee(danh_sach)
+    #
+    save_as_byte(ds2, path, file)
+    #
+    content = load_byte(path, file)
+    read_line_by_line(content)
+
+
+if __name__ == '__main__':
+    main()
